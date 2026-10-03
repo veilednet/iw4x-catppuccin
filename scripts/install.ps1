@@ -18,6 +18,7 @@ try {
     $userraw = Join-Path $game 'userraw'
     New-Item -ItemType Directory -Force $userraw | Out-Null
     foreach ($f in $PayloadFiles) { Copy-Item (Join-Path $PayloadDir $f) $userraw -Force }
+    foreach ($f in $LegacyFiles) { Remove-Item (Join-Path $userraw $f) -Force -ErrorAction SilentlyContinue }
     Write-Good 'Copied theme files to userraw\'
 
     # Console / scoreboard / sprint-meter colours live in the player config.
@@ -41,7 +42,6 @@ try {
 
     Write-Host ''
     Write-Good 'Done! Launch IW4x as usual.'
-    Write-Step 'Optional class pack (overwrites custom classes 1-11): open the console with ~ and type  exec ctp_classes'
     Write-Step 'To remove everything: run uninstall.bat'
     exit 0
 } catch {

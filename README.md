@@ -1,6 +1,6 @@
 # Catppuccin Macchiato for IW4x
 
-A full-UI [Catppuccin Macchiato](https://catppuccin.com/palette) theme for [IW4x](https://iw4x.io) (Call of Duty: Modern Warfare 2, 2009) — plus an optional pack of trickshot and tryhard classes with coloured names.
+A full-UI [Catppuccin Macchiato](https://catppuccin.com/palette) theme for [IW4x](https://iw4x.io) (Call of Duty: Modern Warfare 2, 2009).
 
 - Solid Macchiato backgrounds instead of the soldier art, clouds, glows and fog
 - Menus recoloured to Catppuccin text/accent colours with a mauve selection highlight
@@ -25,30 +25,6 @@ install.bat "D:\SteamLibrary\steamapps\common\Call of Duty Modern Warfare 2"
 
 Close the game and double-click **`uninstall.bat`**. It removes the theme files and restores your original console/HUD colours exactly as they were.
 
-## Optional: class pack
-
-Overwrites custom classes 1–11 with ready-made loadouts. In game, open the console (`~`) and type:
-
-```
-exec ctp_classes
-```
-
-| # | Name | Loadout |
-|---|---|---|
-| 1 | Rainbow Snipe (animated) | Intervention FMJ + Akimbo 1887s · Sleight of Hand / Lightweight / Commando |
-| 2 | Quickscope God | Intervention FMJ · Sleight of Hand / Stopping Power / Commando |
-| 3 | CoD4 R700 Flicks | IW4x's CoD4 R700 + Tac Knife · Marathon / Lightweight / Commando |
-| 4 | Barrett Bounces | Barrett FMJ + SPAS-12 · Sleight of Hand / Lightweight / Commando |
-| 5 | WA2000 Snaps | WA2000 FMJ + Tac Knife + Tactical Insertion |
-| 6 | OMA Canswap | Intervention + One Man Army for class-swap tricks |
-| 7 | UMP Silent Rush | UMP45 Silencer/Rapid Fire · Marathon / Lightweight / Ninja |
-| 8 | ACR Laser Beam | ACR Holo/FMJ · Scavenger / Stopping Power / Ninja |
-| 9 | Tube Tryhard (animated) | M4 Tube + One Man Army · Danger Close / Martyrdom |
-| 10 | Akimbo 1887s | Riot shield on your back + Akimbo 1887s |
-| 11 | Tac Knife Ninja | MP5K + USP Tac Knife · Marathon / Lightweight / Commando |
-
-Uninstalling the theme doesn't touch your classes — change them in Create-a-Class as usual.
-
 ## Notes
 
 - **Built for IW4x r5154.** The theme ships recoloured copies of IW4x's own menus, so after an IW4x update the installer warns you, and menus that IW4x changed keep the older layout until the theme is rebuilt (see below).
@@ -64,7 +40,7 @@ pip install pillow
 python builder\rebuild.py "C:\...\Call of Duty Modern Warfare 2"
 ```
 
-This regenerates `userraw\z_catppuccin.iwd` from your current game files; run `install.bat` afterwards. `builder\gen_classes.py` regenerates the class pack.
+This regenerates `userraw\z_catppuccin.iwd` from your current game files; run `install.bat` afterwards.
 
 ## Credits & licence
 

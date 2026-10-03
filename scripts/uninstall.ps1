@@ -24,7 +24,7 @@ try {
     }
 
     $removed = 0
-    foreach ($f in $PayloadFiles + $BackupName) {
+    foreach ($f in $PayloadFiles + $LegacyFiles + $BackupName) {
         $p = Join-Path $userraw $f
         if (Test-Path $p) { Remove-Item $p -Force; $removed++ }
     }
@@ -32,7 +32,6 @@ try {
 
     Write-Host ''
     Write-Good 'Done - IW4x is back to its stock look.'
-    Write-Step 'Classes loaded with ctp_classes stay in your profile; edit or reset them in Create-a-Class.'
     exit 0
 } catch {
     Write-Host ''

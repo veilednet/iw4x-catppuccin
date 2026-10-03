@@ -3,7 +3,8 @@ $ErrorActionPreference = 'Stop'
 
 $PackageRoot   = Split-Path -Parent $PSScriptRoot
 $PayloadDir    = Join-Path $PackageRoot 'userraw'
-$PayloadFiles  = @('z_catppuccin.iwd', 'ctp_theme.cfg', 'ctp_classes.cfg')
+$PayloadFiles  = @('z_catppuccin.iwd', 'ctp_theme.cfg')
+$LegacyFiles   = @('ctp_classes.cfg')   # shipped by v1.0.0; cleaned up on install/uninstall
 $BackupName    = 'catppuccin_backup.json'
 $BuiltForIw4x  = 'r5154'   # IW4x client the bundled menus were generated from
 $GameFolder    = 'Call of Duty Modern Warfare 2'
