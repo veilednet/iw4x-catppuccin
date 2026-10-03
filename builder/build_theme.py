@@ -332,6 +332,9 @@ def main():
                 text_is_stock = True
             else:
                 text_is_stock = False
+            if rel == "ui_mp/bg.inc":
+                # IW4x hides the menu background whenever a mod is loaded (black menus) - always draw it
+                text = re.sub(r'dvarString\(\s*"fs_game"\s*\)\s*[!=]=\s*""\s*&&\s*', "", text)
             if TEST_HOOK and rel == "ui_mp/main_text.menu":   # test builds only: run the screenshot script once the UI is up
                 text = re.sub(r'(uiScript\s+"checkFirstLaunch";[ \t]*\\)', lambda m: m.group(1) + '\n\texec "exec ctp_test"; \\', text, count=1)
                 assert "ctp_test" in text
